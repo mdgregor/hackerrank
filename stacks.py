@@ -19,7 +19,7 @@ def is_balanced(expression):
             if char in (curly[0], brace[0], paren[0]) and expression[index + 1]:
                 balance.append(char)
             elif char in (curly[1], brace[1], paren[1]):
-                if (balance.pop(), char) not in [curly, brace, paren]:
+                if (balance.pop(), char) not in (curly, brace, paren):
                     balanced_brackets = False
 
         except IndexError:
